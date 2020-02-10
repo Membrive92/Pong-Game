@@ -1,0 +1,111 @@
+
+<html lang="esp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0,maximum-scale=1">
+    <meta name="author" content="Jose Antonio Membrive">
+    <meta name="keywords" content="Pong, Juego-Canvas, Html5, Desarrollo web">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Juego Pelota 1v1</title>
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/estilos.css">
+
+</head>
+<body>
+<!-- Ventana emergente de inicion-->
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header Hprincipal">
+                <h5 class="modal-title" id="exampleModalLongTitle">Bienvenido al juego de Pong, a continuacion te explicare las reglas de juego:</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="ml-3 modal-body">
+
+                <ul>
+                    <li>El juego esta preparado para ser 1 VS 1, tienes la opcion de jugar contra una persona o tu solo.</li>
+                    <li>Estan disponibles, el jugador rojo y el azul, el jugador rojo controla su plataforma con las teclas "W" para subir y "S" para bajar.El jugador azul controla su paleta
+                        con las flechas "arriba" y "abajo".</li>
+                    <li>Se mostraran las puntuaciones de cada jugador, se marca cuando la pelota toca la pared del contrario.</li>
+                    <li>Se pueden elegir varias dificultades, elige una para empezar a jugar.</li>
+                    <li>Cada partida dura 5 puntpos.</li>
+                </ul>
+
+
+            </div>
+            <div class="modal-footer Fprincipal">
+                <button id="facil" type="button" class="btn btn-success" data-dismiss="modal" onclick="Pong(30)">Facil</button>
+                <button id="normal" type="button" class="btn btn-primary" data-dismiss="modal"  onclick="Pong(15)">Normal</button>
+                <button id="dificil" type="button" class="btn btn-warning" data-dismiss="modal" onclick="Pong(6)">Dificil</button>
+                <button id="experto" type="button" class="btn btn-danger" data-dismiss="modal" onclick="Pong(0.5)" >Experto</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Ventana emergente de victoria del jugador rojo-->
+<div class="modal fade" id="JugadorRojo" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header Hrojo">
+                <h3 class="modal-title" id="modal-titulo">Partida Finalizada!!</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="ml-3 modal-body">
+
+                <h1 id="ganador-rojo">El Jugador Rojo es el Ganador!</h1>
+
+
+            </div>
+            <div class="modal-footer Frojo">
+                <button id="reiniciar" type="button" class="btn btn-danger" data-dismiss="modal" onclick="location.reload()" >Reiniciar</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Ventana emergente de victoria del jugador azul-->
+<div class="modal fade" id="JugadorAzul" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header Hazul">
+                <h3 class="modal-title" id="modal-titulo2">Partida Finalizada!!</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="ml-3 modal-body">
+
+                <h1 id="ganador-azul">El Jugador Azul es el Ganador!</h1>
+
+
+            </div>
+            <div class="modal-footer Fazul">
+                <button  type="button" class="btn btn-primary" data-dismiss="modal"onclick="location.reload()" >Reiniciar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Marcadores-->
+<div class="JugadorAzul">
+    <h1>Jugador Azul</h1>
+    <p id="puntuacion-azul"></p>
+</div>
+
+<div class="JugadorRojo">
+    <h1>Jugador Rojo</h1>
+    <p id="puntuacion-rojo"></p>
+</div>
+
+<canvas id="myCanvas" width="580" height="520"></canvas>
+
+<script src="JS/jquery-3.3.1.min.js"></script>
+<script src="JS/popper.min.js"></script>
+<script src="JS/bootstrap.min.js"></script>
+<script src="JS/javascript.js"></script>
+</body>
+</html>

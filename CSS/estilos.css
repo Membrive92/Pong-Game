@@ -1,0 +1,49 @@
+* {
+    padding: 0; margin: 0;
+}
+
+canvas{ background: #ffffff;
+    margin-top: 10%;
+    margin-left: 35%
+}
+body {
+    background-color: #000000;
+}
+#ganador-rojo{
+    color: #ff2a12;
+}
+#ganador-azul{
+    color: #2817ff;
+}
+.JugadorAzul{
+    color: #2817ff;
+    
+    position: absolute;
+    top: 25%;
+    left: 75%;
+    text-align: center;
+    
+}
+.JugadorAzul h1{
+    font-size: 400%;
+    
+}
+.JugadorRojo h1{
+    font-size: 400%;
+}
+#puntuacion-azul{
+    font-size: 180px;
+    
+}
+#puntuacion-rojo{
+    font-size: 180px;
+    
+}
+.JugadorRojo{
+    
+    color: #ff2a12;
+    position: absolute;
+    top: 25%;
+    right: 75%;
+    text-align: center;
+}
